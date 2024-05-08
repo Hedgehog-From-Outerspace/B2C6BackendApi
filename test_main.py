@@ -1,5 +1,3 @@
-from main import helloWorld
-from main import hello
 from main import app
 import pytest
 from flask import request

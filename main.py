@@ -1,4 +1,3 @@
-import json
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 
@@ -9,10 +8,6 @@ CORS(app)
 @app.route('/helloWorld', methods = ['GET'])
 def helloWorld():
     return "Hello world!"
-
-@app.route('/test')
-def test():
-    return "Test succesfull"
 
 # An endpoint that expects parameters
 @app.route('/helloWorldParameters', methods = ['GET'])
