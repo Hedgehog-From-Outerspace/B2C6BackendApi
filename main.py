@@ -1,7 +1,9 @@
 import json
 from flask import Flask, jsonify, request, send_file
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # GET method is default
 @app.route('/helloWorld', methods = ['GET'])
@@ -17,7 +19,7 @@ def test():
 def hello():
     name = request.args.get('name')
 
-    if name is None:
+    if name is None or name == "":
         text = 'Hello world!'
 
     else:
@@ -27,9 +29,3 @@ def hello():
 
 if __name__ == '__main__':
     app.run(debug=True, port=9670)
-
-# Theres 404 error handling, although this would probably be better
-# to be handled in the front end
-# @app.errorhandler(404)
-# def page_not_found(e):
-#     return render_template('404.html'), 404
