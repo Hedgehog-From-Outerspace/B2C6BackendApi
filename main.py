@@ -9,8 +9,7 @@ CORS(app)
 def helloWorld():
     return "Hello world!"
 
-# Blah Blah gotta make a commit
-# Nother test
+# Testing someone else approving the pull request
 
 # An endpoint that expects parameters
 @app.route('/helloWorldParameters', methods = ['GET'])
